@@ -2,39 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Morning Goal Setting Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Setting Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #goal-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Morning Goal Setting Questionnaire</h1>
-    <form id="questionnaireForm" action="/submit-form" method="post">
-        <h2>Reflections</h2>
-        <label for="grateful">What am I grateful for today?</label>
-        <textarea id="grateful" name="grateful" required></textarea>
+    <div id="goal-form">
+        <h1>Goal Setting Questions</h1>
+        <form id="questionnaireForm" action="/submit-form" method="post">
+            <label for="why-important">Why is this goal important?</label>
+            <textarea id="why-important" name="why-important" required></textarea>
 
-        <label for="learned">What did I learn yesterday?</label>
-        <textarea id="learned" name="learned" required></textarea>
+            <label for="success-look">What will success look like?</label>
+            <textarea id="success-look" name="success-look" required></textarea>
 
-        <h2>Goal Setting</h2>
-        <label for="topGoals">What are my top three goals for today?</label>
-        <textarea id="topGoals" name="topGoals" required></textarea>
+            <label for="benefit">How will I benefit from reaching this goal?</label>
+            <textarea id="benefit" name="benefit" required></textarea>
 
-        <label for="stepTowardsLongTermGoals">What is one thing I can do today that will bring me closer to my long-term goals?</label>
-        <textarea id="stepTowardsLongTermGoals" name="stepTowardsLongTermGoals" required></textarea>
+            <label for="first-step">What is my first step?</label>
+            <input type="text" id="first-step" name="first-step" required>
 
-        <h2>Personal Growth</h2>
-        <!-- Similar structure for other questions -->
+            <label for="fastest-step">What step will take me furthest, fastest?</label>
+            <input type="text" id="fastest-step" name="fastest-step" required>
 
-        <h2>Health and Wellbeing</h2>
-        <!-- Similar structure for other questions -->
+            <label for="help-achieve">Who can help me achieve it?</label>
+            <input type="text" id="help-achieve" name="help-achieve" required>
 
-        <h2>Productivity</h2>
-        <!-- Similar structure for other questions -->
+            <label for="support">Who will support me?</label>
+            <input type="text" id="support" name="support" required>
 
-        <h2>Reflection and Adaptation</h2>
-        <!-- Similar structure for other questions -->
+            <label for="not-support">Who won't support me?</label>
+            <input type="text" id="not-support" name="not-support" required>
 
-        <button type="submit">Submit</button>
-    </form>
+            <!-- Insert additional sections and questions here as needed -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
